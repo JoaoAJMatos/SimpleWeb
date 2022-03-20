@@ -1,0 +1,7 @@
+# ninja log v5
+16	90	6694907824389991	CMakeFiles/SimpleWeb.dir/src/swlib.cpp.obj	83a8b741f5fa2313
+1	1315	6694907836652551	CMakeFiles/SimpleWeb.dir/main.cpp.obj	c12f8bc117a62e74
+18	1324	6694907836722307	CMakeFiles/SimpleWeb.dir/src/networking/swSocket.cpp.obj	e3443740e38711e2
+3	126	6694929656193683	SimpleWeb.exe	d13fa094ba6b299c
+3	1223	6694929919492461	CMakeFiles/SimpleWeb.dir/main.cpp.obj	c12f8bc117a62e74
+1223	1322	6694929920460506	SimpleWeb.exe	d13fa094ba6b299c
