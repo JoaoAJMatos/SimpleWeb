@@ -4,4 +4,4 @@ project(SimpleWeb)
 set(CMAKE_CXX_STANDARD 14)
 link_libraries(ws2_32 wsock32)
 
-add_executable(SimpleWeb main.cpp src/swlib.cpp src/swlib.h src/networking/swSocket.cpp src/networking/swSocket.h src/networking/swSocket_Binder.cpp src/networking/swSocket_Binder.h src/networking/swConnecting_Socket.cpp src/networking/swConnecting_Socket.h)
+add_executable(SimpleWeb main.cpp src/swlib.h src/networking/sockets/swSocket.cpp src/networking/sockets/swSocket.h src/networking/sockets/swSocket_Binder.cpp src/networking/sockets/swSocket_Binder.h src/networking/sockets/swConnecting_Socket.cpp src/networking/sockets/swConnecting_Socket.h src/networking/sockets/swListening_Socket.cpp src/networking/sockets/swListening_Socket.h src/networking/sockets/swlib_sockets.h src/networking/swlib_networking.h)

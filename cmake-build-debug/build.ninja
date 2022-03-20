@@ -55,29 +55,29 @@ build CMakeFiles/SimpleWeb.dir/main.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/U
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir
 
-build CMakeFiles/SimpleWeb.dir/src/swlib.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/swlib.cpp || cmake_object_order_depends_target_SimpleWeb
-  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\swlib.cpp.obj.d
+build CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/sockets/swSocket.cpp || cmake_object_order_depends_target_SimpleWeb
+  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\sockets\swSocket.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir
-  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking\sockets
 
-build CMakeFiles/SimpleWeb.dir/src/networking/swSocket.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/swSocket.cpp || cmake_object_order_depends_target_SimpleWeb
-  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\swSocket.cpp.obj.d
+build CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket_Binder.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/sockets/swSocket_Binder.cpp || cmake_object_order_depends_target_SimpleWeb
+  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\sockets\swSocket_Binder.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir
-  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking
+  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking\sockets
 
-build CMakeFiles/SimpleWeb.dir/src/networking/swSocket_Binder.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/swSocket_Binder.cpp || cmake_object_order_depends_target_SimpleWeb
-  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\swSocket_Binder.cpp.obj.d
+build CMakeFiles/SimpleWeb.dir/src/networking/sockets/swConnecting_Socket.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/sockets/swConnecting_Socket.cpp || cmake_object_order_depends_target_SimpleWeb
+  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\sockets\swConnecting_Socket.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir
-  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking
+  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking\sockets
 
-build CMakeFiles/SimpleWeb.dir/src/networking/swConnecting_Socket.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/swConnecting_Socket.cpp || cmake_object_order_depends_target_SimpleWeb
-  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\swConnecting_Socket.cpp.obj.d
+build CMakeFiles/SimpleWeb.dir/src/networking/sockets/swListening_Socket.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/sockets/swListening_Socket.cpp || cmake_object_order_depends_target_SimpleWeb
+  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\sockets\swListening_Socket.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir
-  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking
+  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking\sockets
 
 
 # =============================================================================
@@ -87,7 +87,7 @@ build CMakeFiles/SimpleWeb.dir/src/networking/swConnecting_Socket.cpp.obj: CXX_C
 #############################################
 # Link the executable SimpleWeb.exe
 
-build SimpleWeb.exe: CXX_EXECUTABLE_LINKER__SimpleWeb_Debug CMakeFiles/SimpleWeb.dir/main.cpp.obj CMakeFiles/SimpleWeb.dir/src/swlib.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/swSocket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/swSocket_Binder.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/swConnecting_Socket.cpp.obj
+build SimpleWeb.exe: CXX_EXECUTABLE_LINKER__SimpleWeb_Debug CMakeFiles/SimpleWeb.dir/main.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket_Binder.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swConnecting_Socket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swListening_Socket.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir

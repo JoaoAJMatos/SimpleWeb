@@ -12,6 +12,16 @@ swlib::swSocket::swSocket(short domain, int service, int protocol, int port, u_l
     address.sin_port = htons(port); // Convert integer byte order to network using htons()
     address.sin_addr.s_addr = htonl(iface);
 
+    // Attempt to initialize winsock
+    WORD wVersionRequested = MAKEWORD(2, 2);
+    int iResult = WSAStartup(wVersionRequested, &wsa);
+
+    if (iResult != 0)
+    {
+        std::cout << "WSAStartup failed with error: " <<  iResult << std::endl;
+        exit(EXIT_FAILURE);
+    }
+
     // Establish socket
     sock = socket(domain, service, protocol);
     test_connection(sock);
@@ -34,7 +44,7 @@ struct sockaddr_in swlib::swSocket::get_address() {
     return address;
 }
 
-SOCKET swlib::swSocket::get_sock() {
+int swlib::swSocket::get_sock() {
     // Return this socket
     return sock;
 }

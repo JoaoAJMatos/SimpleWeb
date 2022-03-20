@@ -19,7 +19,7 @@ namespace swlib
         swSocket_Binder(short domain, int service, int protocol, int port, u_long iface);
 
         // Virtual function from parent
-        int sw_connect(SOCKET sock, struct sockaddr_in address) override;
+        int sw_connect(int sock, struct sockaddr_in address) override;
     };
 }
 

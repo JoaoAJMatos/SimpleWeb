@@ -5,10 +5,6 @@
 #ifndef SIMPLEWEB_SWLIB_H
 #define SIMPLEWEB_SWLIB_H
 
-
-class swlib {
-
-};
-
+#include "networking/swlib_networking.h"
 
 #endif //SIMPLEWEB_SWLIB_H

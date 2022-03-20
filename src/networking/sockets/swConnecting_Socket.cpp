@@ -5,7 +5,8 @@
 #include "swConnecting_Socket.h"
 
 // Constructor
-swlib::swConnecting_Socket::swConnecting_Socket(short domain, int service, int protocol, int port, u_long iface): swSocket(domain, service, protocol, port, iface)
+swlib::swConnecting_Socket::swConnecting_Socket(short domain, int service, int protocol, int port, u_long iface)
+: swSocket(domain, service, protocol, port, iface)
 {
     //  Establish network connection
     set_connection(sw_connect(get_sock(), get_address()));
@@ -13,7 +14,7 @@ swlib::swConnecting_Socket::swConnecting_Socket(short domain, int service, int p
 }
 
 // Definition of sw_connect() virtual function
-int swlib::swConnecting_Socket::sw_connect(SOCKET sock, struct sockaddr_in address) {
+int swlib::swConnecting_Socket::sw_connect(int sock, struct sockaddr_in address) {
     return connect(sock, (struct sockaddr *)&address, sizeof(address));
 }
 
