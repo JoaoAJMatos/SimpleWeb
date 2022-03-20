@@ -30,12 +30,17 @@ namespace swlib
 
         // Virtual function to connect to a network
         virtual int sw_connect(SOCKET sock, struct sockaddr_in address) = 0;
+
         // Function to test sockets and connections
         static void test_connection(int);
+
         // Getter functions
         struct sockaddr_in get_address();
-        SOCKET get_sock() const;
-        int get_connection() const;
+        SOCKET get_sock();
+        int get_connection();
+
+        // Setter functions
+        void set_connection(int con);
     };
 }
 

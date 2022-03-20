@@ -15,10 +15,6 @@ swlib::swSocket::swSocket(short domain, int service, int protocol, int port, u_l
     // Establish socket
     sock = socket(domain, service, protocol);
     test_connection(sock);
-
-    //  Establish network connection
-    connection = sw_connect(sock, address);
-    test_connection(connection);
 }
 
 // Test conection virtual function
@@ -38,13 +34,20 @@ struct sockaddr_in swlib::swSocket::get_address() {
     return address;
 }
 
-SOCKET swlib::swSocket::get_sock() const {
+SOCKET swlib::swSocket::get_sock() {
     // Return this socket
     return sock;
 }
 
-int swlib::swSocket::get_connection() const {
+int swlib::swSocket::get_connection() {
     // Return this connection
     return connection;
 }
 // Getter functions - End
+
+
+// Setter functions - Begin
+void swlib::swSocket::set_connection(int con) {
+    connection = con;
+}
+// Setter functions - End
