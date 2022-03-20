@@ -5,3 +5,11 @@
 3	126	6694929656193683	SimpleWeb.exe	d13fa094ba6b299c
 3	1223	6694929919492461	CMakeFiles/SimpleWeb.dir/main.cpp.obj	c12f8bc117a62e74
 1223	1322	6694929920460506	SimpleWeb.exe	d13fa094ba6b299c
+2	1251	6694939358519422	CMakeFiles/SimpleWeb.dir/main.cpp.obj	c12f8bc117a62e74
+15	1315	6694939359154752	CMakeFiles/SimpleWeb.dir/src/networking/swSocket.cpp.obj	e3443740e38711e2
+1316	1421	6694939360191161	SimpleWeb.exe	d13fa094ba6b299c
+3	1128	6694940051353648	CMakeFiles/SimpleWeb.dir/src/networking/swSocket.cpp.obj	e3443740e38711e2
+1129	1228	6694940052339167	SimpleWeb.exe	d13fa094ba6b299c
+15	1214	6695011819877350	CMakeFiles/SimpleWeb.dir/src/networking/swSocket.cpp.obj	e3443740e38711e2
+3	1160	6695011966391371	CMakeFiles/SimpleWeb.dir/main.cpp.obj	c12f8bc117a62e74
+1161	1267	6695011967436144	SimpleWeb.exe	d13fa094ba6b299c

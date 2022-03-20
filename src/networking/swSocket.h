@@ -10,7 +10,6 @@
 #include <winsock2.h>
 #include <WS2tcpip.h>
 #include <tchar.h>
-
 #include <iostream>
 
 // Message buffer
@@ -21,19 +20,22 @@ namespace swlib
     class swSocket {
     private:
         // Private variables
-        WSADATA wsa;
-        SOCKET s;
-        struct sockaddr_in server;
-        int iResult;
-        const char message[Buffer] = "This message being displayed to you, is sent from a C++ Winsocket HTTP server";
-        char reply[Buffer];
+        SOCKET sock;
+        int connection;
+        struct sockaddr_in address;
 
     public:
         // Constructor
-        swSocket();
+        swSocket(short domain, int service, int protocol, int port, u_long iface);
 
-        // Public Functions
-        int swInit();
+        // Virtual function to connect to a network
+        virtual int sw_connect(SOCKET sock, struct sockaddr_in address) = 0;
+        // Function to test sockets and connections
+        static void test_connection(int);
+        // Getter functions
+        struct sockaddr_in get_address();
+        SOCKET get_sock() const;
+        int get_connection() const;
     };
 }
 

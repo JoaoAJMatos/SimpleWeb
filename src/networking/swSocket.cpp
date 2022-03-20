@@ -4,50 +4,47 @@
 
 #include "swSocket.h"
 
-swlib::swSocket::swSocket() {
+// Default constructor
+swlib::swSocket::swSocket(short domain, int service, int protocol, int port, u_long iface)
+{
+    // Define address structure
+    address.sin_family = domain;
+    address.sin_port = htons(port); // Convert integer byte order to network using htons()
+    address.sin_addr.s_addr = htonl(iface);
 
+    // Establish socket
+    sock = socket(domain, service, protocol);
+    test_connection(sock);
+
+    //  Establish network connection
+    connection = sw_connect(sock, address);
+    test_connection(connection);
 }
 
-int swlib::swSocket::swInit() {
-    // Start windows socket API
-    if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0)
+// Test conection virtual function
+void swlib::swSocket::test_connection(int item_to_test)
+{
+    // Confirm that either the socket or connection have been properly established
+    if (item_to_test < 0)
     {
-        std::cerr << "Winsock Failed" << std::endl;
-        getchar();
-        return 1;
+        perror("Failed to connect...");
+        exit(EXIT_FAILURE);
     }
-
-    std::cout << "Windows Socket API started" << std::endl;
-
-    // Create the network socket
-    s = socket(AF_INET, SOCK_STREAM, 0);
-    // Check for errors
-    if (s == SOCKET_ERROR)
-    {
-        std::cerr << "Socket Error: " << WSAGetLastError() << std::endl;
-        getchar();
-        return 1;
-    }
-
-
-    std::cout << "Socket Created" << std::endl;
-
-    server.sin_family = AF_INET; // IPv4 address family
-    server.sin_port = htons(80);
-    InetPton(AF_INET, _T("0.0.0.0"), &server.sin_addr); // Define network address to run server on
-
-    // Bind host address and port number
-    iResult = bind(s, (struct sockaddr*) &server, sizeof(server));
-    // Check for errors
-    if (iResult == SOCKET_ERROR)
-    {
-        std::cout << "Bind error: " << WSAGetLastError() << std::endl;
-        getchar();
-        return 1;
-    }
-
-    std::cout << "Listening on: 0.0.0.0:80" << std::endl;
-    iResult = listen(s, AF_INET);
-
-    return 0;
 }
+
+// Getter functions - Begin
+struct sockaddr_in swlib::swSocket::get_address() {
+    // Returns this socket's address
+    return address;
+}
+
+SOCKET swlib::swSocket::get_sock() const {
+    // Return this socket
+    return sock;
+}
+
+int swlib::swSocket::get_connection() const {
+    // Return this connection
+    return connection;
+}
+// Getter functions - End

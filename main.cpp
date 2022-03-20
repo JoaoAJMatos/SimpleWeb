@@ -3,9 +3,9 @@
 #include "src/networking/swSocket.h"
 
 int main() {
-    swlib::swSocket sw;
+    //swlib::swSocket sw;
 
-    sw.swInit();
+    //sw.swInit();
 
     return 0;
 }
