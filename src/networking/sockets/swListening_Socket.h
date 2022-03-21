@@ -16,12 +16,14 @@ namespace swlib
 
     public:
         // Constructor
-        swListening_Socket(short domain, int service, int protocol, int port, u_long iface, int bklg);
+        swListening_Socket(int domain, int service, int protocol, int port, u_long iface, int bklg);
 
         void start_listening();
+
+        /* GETTERS */
+        int get_backlog() const;
+        int get_listening() const;
     };
 }
-
-
 
 #endif //SIMPLEWEB_SWLISTENING_SOCKET_H

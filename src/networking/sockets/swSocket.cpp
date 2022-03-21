@@ -4,8 +4,8 @@
 
 #include "swSocket.h"
 
-// Default constructor
-swlib::swSocket::swSocket(short domain, int service, int protocol, int port, u_long iface)
+/* CONSTRUCTOR */
+swlib::swSocket::swSocket(int domain, int service, int protocol, int port, u_long iface)
 {
     // Define address structure
     address.sin_family = domain;
@@ -27,6 +27,7 @@ swlib::swSocket::swSocket(short domain, int service, int protocol, int port, u_l
     test_connection(sock);
 }
 
+/* VIRTUAL FUNCTIONS */
 // Test conection virtual function
 void swlib::swSocket::test_connection(int item_to_test)
 {
@@ -38,26 +39,13 @@ void swlib::swSocket::test_connection(int item_to_test)
     }
 }
 
-// Getter functions - Begin
+/* GETTERS */
+// Returns this socket's address
 struct sockaddr_in swlib::swSocket::get_address() {
-    // Returns this socket's address
     return address;
 }
 
-int swlib::swSocket::get_sock() {
-    // Return this socket
+// Return this socket
+int swlib::swSocket::get_sock() const {
     return sock;
 }
-
-int swlib::swSocket::get_connection() {
-    // Return this connection
-    return connection;
-}
-// Getter functions - End
-
-
-// Setter functions - Begin
-void swlib::swSocket::set_connection(int con) {
-    connection = con;
-}
-// Setter functions - End

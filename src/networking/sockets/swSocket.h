@@ -16,29 +16,34 @@ namespace swlib
 {
     class swSocket {
     private:
-        // Private variables
+        /* MEMBER VARIABLES */
+        // Once instantiated, sock contains the address of a socket object on the network.
+        // This should be a non-negative number.
         int sock;
-        int connection;
+        // The address variable is a struct that contains information about the protocol,
+        // type, and interface of a given socket. These parameters are specified and set
+        // in the constructor.
         struct sockaddr_in address;
+
         WSADATA wsa;
 
     public:
-        // Constructor
-        swSocket(short domain, int service, int protocol, int port, u_long iface);
+        /* CONSTRUCTORS */
+        // A parameterized constructor is required to instantiate the class.
+        swSocket(int domain, int service, int protocol, int port, u_long iface);
 
-        // Virtual function to connect to a network
+        /* VIRTUAL FUNCTIONS */
+        // This function connects to the network using either bind() or connect() from winsock2.h
         virtual int sw_connect(int sock, struct sockaddr_in address) = 0;
 
-        // Function to test sockets and connections
+        /* TESTERS */
+        // This function exits the program if the connection is not properly established.
+        // This should be checked frequently.
         static void test_connection(int);
 
-        // Getter functions
+        /* GETTERS */
         struct sockaddr_in get_address();
-        int get_sock();
-        int get_connection();
-
-        // Setter functions
-        void set_connection(int con);
+        int get_sock() const;
     };
 }
 
