@@ -9,7 +9,7 @@ swlib::swSocket_Binder::swSocket_Binder(int domain, int service, int protocol, i
 : swSocket(domain, service, protocol, port, iface)
 {
     //  Establish network connection
-    sw_connect(sw_connect(get_sock(), get_address()));
+    sw_connect(get_sock(), get_address());
     // Test the connection
     test_connection(binding);
 }

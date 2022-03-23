@@ -85,6 +85,12 @@ build CMakeFiles/SimpleWeb.dir/src/networking/server/swServer.cpp.obj: CXX_COMPI
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir
   OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking\server
 
+build CMakeFiles/SimpleWeb.dir/src/networking/server/exs/swServer_test.cpp.obj: CXX_COMPILER__SimpleWeb_Debug C$:/Users/joaoa/CLionProjects/SimpleWeb/src/networking/server/exs/swServer_test.cpp || cmake_object_order_depends_target_SimpleWeb
+  DEP_FILE = CMakeFiles\SimpleWeb.dir\src\networking\server\exs\swServer_test.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\SimpleWeb.dir
+  OBJECT_FILE_DIR = CMakeFiles\SimpleWeb.dir\src\networking\server\exs
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SimpleWeb
@@ -93,7 +99,7 @@ build CMakeFiles/SimpleWeb.dir/src/networking/server/swServer.cpp.obj: CXX_COMPI
 #############################################
 # Link the executable SimpleWeb.exe
 
-build SimpleWeb.exe: CXX_EXECUTABLE_LINKER__SimpleWeb_Debug CMakeFiles/SimpleWeb.dir/main.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket_Binder.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swConnecting_Socket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swListening_Socket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/server/swServer.cpp.obj
+build SimpleWeb.exe: CXX_EXECUTABLE_LINKER__SimpleWeb_Debug CMakeFiles/SimpleWeb.dir/main.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swSocket_Binder.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swConnecting_Socket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/sockets/swListening_Socket.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/server/swServer.cpp.obj CMakeFiles/SimpleWeb.dir/src/networking/server/exs/swServer_test.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SimpleWeb.dir

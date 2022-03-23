@@ -11,12 +11,20 @@ namespace swlib
 {
     class swConnecting_Socket: public swSocket
     {
+    private:
+        /* MEMBER VARIABLES */
+        // The connection variable will store the result of the connect() function in Winsock2.h, stores the value 0 if no error occur
+        int connection;
+
     public:
         // Constructor
         swConnecting_Socket(short domain, int service, int protocol, int port, u_long iface);
 
         // Virtual function from parent
         int sw_connect(int sock, struct sockaddr_in address) override;
+
+        /* GETTERS */
+        int get_connection() const;
     };
 }
 
